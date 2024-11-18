@@ -3,7 +3,7 @@ import React from 'react';
 
 const TextCard = () => {
   return (
-    <div className='max-w-100 grid  place-items-center px-2 '>
+    <div className='max-w-100 grid  place-items-center sm:px-2 px-4 py-4'>
       <div className='grid gap-3'>
         <p className='text-3xl' style={{ width: '15ch' }}>
           CREATE AND SHARE YOUR PHOTOS STORIES
