@@ -19,7 +19,7 @@ const Header = () => {
           <img src={logo} />
         </NavLink>
         <div
-          className='flex justify-between gap-10 items-center min-h-full	'
+          className='justify-between gap-10 items-center min-h-full	hidden md:flex'
           style={{ border: '1px solid black' }}>
           <NavLink to='stories'>STORIES</NavLink>
           <NavLink to='features'>FEATURES</NavLink>
@@ -27,7 +27,9 @@ const Header = () => {
         </div>
         <NavLink
           to='invite'
-          className={'px-4 py-2 bg-black text-white  hover:bg-sky-700'}>
+          className={
+            'px-4 py-2 bg-black text-white  hover:bg-sky-700 hidden md:block'
+          }>
           GET AN INVITE
         </NavLink>
       </nav>

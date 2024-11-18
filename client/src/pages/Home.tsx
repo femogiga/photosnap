@@ -11,32 +11,33 @@ import DescCard from '../components/DescCard';
 const Home = () => {
   return (
     <main>
-      <section className='bg-black text-white grid grid-cols-12'>
-        <div className='col-start-1 col-end-5 self-center	'>
+      <section className='bg-black text-white grid  md:grid-cols-12 sm:grid-cols-1'>
+        <div className='sm:order-2 order-1 sm:grid-cols-1 md:col-start-1 md:col-end-5 self-center	'>
           <TextCard />
         </div>
-        <div className='col-start-5 col-end-13 w-full '>
+        <div className='sm:order-1 md:order-2 sm:grid-cols-1 md:col-start-5 md:col-end-13 w-full '>
           <ImageCard />
         </div>
       </section>
 
-      <section className='bg-white text-black grid grid-cols-12 '>
-        <div className='col-start-1 col-end-8'>
+      <section className='bg-white text-black grid sm:grid-cols-1 md:grid-cols-12 '>
+        <div className=' sm:grid-cols-1 md:col-start-1 md:col-end-8'>
           <ImageCard
             src={
               'https://images.pexels.com/photos/29322338/pexels-photo-29322338/free-photo-of-colorful-painted-faces-and-floral-hats-portrait.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load'
             }
           />
         </div>
-        <div className='col-start-8 col-end-13 self-center'>
+        <div className='sm:grid-cols-1 md:col-start-8 md:col-end-13 self-center'>
           <TextCard />
         </div>
       </section>
-      <section className='bg-white text-black grid grid-cols-12'>
-        <div className='col-start-1 col-end-5 self-center	'>
+
+      <section className='bg-white text-black grid md:grid-cols-12 sm:grid-cols-1'>
+        <div className='sm:order-1 order-2 md:col-start-1 md:col-end-5 self-center	'>
           <TextCard />
         </div>
-        <div className='col-start-5 col-end-13 w-full '>
+        <div className='sm:order-2 order-1 md:col-start-5 md:col-end-13 w-full '>
           <ImageCard
             src={
               'https://images.pexels.com/photos/29339872/pexels-photo-29339872/free-photo-of-creative-outdoor-pink-art-installation.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load'
@@ -44,8 +45,9 @@ const Home = () => {
           />
         </div>
       </section>
+
       <section>
-        <div className='main-card-container grid grid-cols-4'>
+        <div className='main-card-container grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
           <MainCard />
           <MainCard />
           <MainCard />
@@ -53,7 +55,7 @@ const Home = () => {
         </div>
       </section>
       <section>
-        <div className='flex justify-around'>
+        <div className='flex flex-col gap-x-8 md:flex-row items-center md:justify-around p-1'>
           <DescCard src={responsive} title={'100% Responsive'} desc={''} />
           <DescCard src={noLimit} title={'No Photo Upload Limit'} desc={''} />
           <DescCard src={embed} title={'Available to Embed'} desc={''} />
