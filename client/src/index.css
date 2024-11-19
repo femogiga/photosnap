@@ -15,8 +15,20 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position:relative;
 }
 
+.header{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  margin-block-end:5rem;
+}
+
+.linkgroup{
+  transition: height 1.5s ease-in-out 300ms;
+}
 *,*::after,*::before{
   box-sizing: border-box;
   margin:0;

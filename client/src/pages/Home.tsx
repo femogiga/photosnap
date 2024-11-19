@@ -10,18 +10,18 @@ import DescCard from '../components/DescCard';
 
 const Home = () => {
   return (
-    <main>
+    <main className='mt-20'>
       <section className='bg-black text-white grid  md:grid-cols-12 sm:grid-cols-1'>
-        <div className='sm:order-2 order-1 sm:grid-cols-1 md:col-start-1 md:col-end-5 self-center	'>
+        <div className='order-2 md:order-1  grid-cols-1 md:col-start-1 md:col-end-5 self-center	'>
           <TextCard />
         </div>
-        <div className='sm:order-1 md:order-2 sm:grid-cols-1 md:col-start-5 md:col-end-13 w-full '>
+        <div className='md:order-2 sm:order-1 sm:grid-cols-1 md:col-start-5 md:col-end-13 w-full '>
           <ImageCard />
         </div>
       </section>
 
       <section className='bg-white text-black grid sm:grid-cols-1 md:grid-cols-12 '>
-        <div className=' sm:grid-cols-1 md:col-start-1 md:col-end-8'>
+        <div className='grid-cols-1 md:col-start-1 md:col-end-8'>
           <ImageCard
             src={
               'https://images.pexels.com/photos/29322338/pexels-photo-29322338/free-photo-of-colorful-painted-faces-and-floral-hats-portrait.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load'
@@ -34,7 +34,7 @@ const Home = () => {
       </section>
 
       <section className='bg-white text-black grid md:grid-cols-12 sm:grid-cols-1'>
-        <div className='sm:order-1 order-2 md:col-start-1 md:col-end-5 self-center	'>
+        <div className='order-1 order-2 md:col-start-1 md:col-end-5 self-center	'>
           <TextCard />
         </div>
         <div className='sm:order-2 order-1 md:col-start-5 md:col-end-13 w-full '>

@@ -16,13 +16,11 @@ const Header = () => {
     e.preventDefault();
     console.log('clicked');
     console.log(angle);
-    setActive(!active);
+    setActive((active) => !active);
   };
   return (
-    <header>
-      <nav
-        className='grid grid-cols-1 md:grid-cols-3 gap-y-4 	 items-center font-bold py-8 '
-        style={{ border: '1px solid black' }}>
+    <header className='header z-10 bg-white linkgroup '>
+      <nav className='  grid grid-cols-1 md:grid-cols-3 gap-y-4 	 items-center font-bold py-8 px-8  '>
         <section className='flex items-center justify-between'>
           <NavLink to='/'>
             <img src={logo} />
@@ -31,10 +29,11 @@ const Header = () => {
             <Hamburger onClick={handleClick} active={active} />
           </div>
         </section>
-        <section className='md:flex md:col-span-2 	md:justify-between'>
-          <div
-            className=' flex flex-col md:flex-row justify-end md:justify-between gap-y-8 md:gap-x-10 items-center min-h-full mb-4	md:mb-0 md:w-3/6	'
-            style={{ border: '1px solid black' }}>
+        <section
+          className={`${
+            !active ? 'hidden' : 'md:flex'
+          } md:flex md:col-span-2 	md:justify-between   gap-x-4`}>
+          <div className=' flex flex-col md:flex-row justify-end md:justify-between gap-y-8 md:gap-x-4 items-center min-h-full mb-4	md:mb-0 md:w-3/6 '>
             <NavLink to='stories'>STORIES</NavLink>
             <NavLink to='features'>FEATURES</NavLink>
             <NavLink to='pricing'>PRICING</NavLink>
@@ -43,7 +42,7 @@ const Header = () => {
           <NavLink
             to='invite'
             className={
-              'px-4 py-2 bg-black text-white  hover:bg-sky-700 flex justify-center md:block'
+              'px-4 py-2 bg-black text-white  hover:bg-sky-700 flex justify-center md:block  justify-self-center w-full md:max-w-60 text-center	'
             }>
             GET AN INVITE
           </NavLink>
