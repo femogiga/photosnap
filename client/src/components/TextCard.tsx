@@ -3,16 +3,14 @@ import React from 'react';
 
 const TextCard = () => {
   return (
-    <div className='max-w-100 grid  place-items-center sm:px-2 px-4 py-4'>
-      <div className='grid gap-3'>
-        <p className='text-3xl' style={{ width: '15ch' }}>
-          CREATE AND SHARE YOUR PHOTOS STORIES
+    <div className='max-w-100  grid  place-items-center sm:px-2 px-4 py-4'>
+      <div className='grid gap-3 px-3 min-h-full '>
+        <p className='text-3xl'>
+          CREATE AND SHARE <br></br>YOUR PHOTOS STORIES
         </p>
-        <p style={{ maxWidth: '50ch' }} className='mb-4'>
+        <p style={{ maxWidth: '' }} className='mb-4'>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo et
           placeat similique provident ipsum blanditiis necessitatibus quis
-          accusantium debitis commodi explicabo veritatis eius, dignissimos cum
-          eveniet, laborum architecto? Nemo, non
         </p>
         <div className='flex items-center gap-2'>
           <p>GET AN INVITE</p>

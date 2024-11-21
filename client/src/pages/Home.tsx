@@ -7,33 +7,35 @@ import noLimit from '../assets/no-limit.svg';
 import responsive from '../assets/responsive.svg';
 import embed from '../assets/embed.svg';
 import DescCard from '../components/DescCard';
+import TextCardIndicator from '../components/TextCardIndicator';
 
 const Home = () => {
   return (
     <main className='mt-20'>
-      <section className='bg-black text-white grid  md:grid-cols-12 sm:grid-cols-1'>
-        <div className='order-2 md:order-1  grid-cols-1 md:col-start-1 md:col-end-5 self-center	'>
+      <section className='relative bg-black text-white grid  md:grid-cols-12 sm:grid-cols-1 grid-rows-2 md:grid-rows-1'>
+        <div className=' order-2 grid md:order-1  grid-cols-1 md:col-start-1 md:col-end-5 self-center	'>
           <TextCard />
+          <TextCardIndicator />
         </div>
         <div className='md:order-2 sm:order-1 sm:grid-cols-1 md:col-start-5 md:col-end-13 w-full '>
           <ImageCard />
         </div>
       </section>
 
-      <section className='bg-white text-black grid sm:grid-cols-1 md:grid-cols-12 '>
-        <div className='grid-cols-1 md:col-start-1 md:col-end-8'>
+      <section className='bg-white text-black grid sm:grid-cols-1 md:grid-cols-12 grid-rows-2 md:grid-rows-1 '>
+        <div className='grid-cols-1 md:col-start-1 md:col-end-9'>
           <ImageCard
             src={
               'https://images.pexels.com/photos/29322338/pexels-photo-29322338/free-photo-of-colorful-painted-faces-and-floral-hats-portrait.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load'
             }
           />
         </div>
-        <div className='sm:grid-cols-1 md:col-start-8 md:col-end-13 self-center'>
+        <div className='sm:grid-cols-1 md:col-start-9 md:col-end-13 self-center'>
           <TextCard />
         </div>
       </section>
 
-      <section className='bg-white text-black grid md:grid-cols-12 sm:grid-cols-1'>
+      <section className='bg-white text-black grid md:grid-cols-12 sm:grid-cols-1 grid-rows-2 md:grid-rows-1'>
         <div className='order-1 order-2 md:col-start-1 md:col-end-5 self-center	'>
           <TextCard />
         </div>

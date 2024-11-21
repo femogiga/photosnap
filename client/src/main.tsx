@@ -10,16 +10,17 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import BaseLayout from './layouts/BaseLayout.tsx';
+import Story from './pages/Story.tsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route  element={<BaseLayout />}>
+    <Route element={<BaseLayout />}>
       <Route path='/' element={<App />} />
-      {/* <Route path='about' element={<About />} /> */}
+      <Route path='home' element={<App />} />
+      <Route path='stories' element={<Story />} />
     </Route>
   )
 );
-
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
