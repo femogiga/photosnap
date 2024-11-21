@@ -8,6 +8,7 @@ import responsive from '../assets/responsive.svg';
 import embed from '../assets/embed.svg';
 import DescCard from '../components/DescCard';
 import TextCardIndicator from '../components/TextCardIndicator';
+import Card from '../components/Card';
 
 const Home = () => {
   return (
@@ -23,10 +24,10 @@ const Home = () => {
       </section>
 
       <section className='bg-white text-black grid sm:grid-cols-1 md:grid-cols-12 grid-rows-2 md:grid-rows-1 '>
-        <div className='grid-cols-1 md:col-start-1 md:col-end-9'>
+        <div className='grid-cols-1 md:col-start-1 md:col-end-9 img-card-cont'>
           <ImageCard
             src={
-              'https://images.pexels.com/photos/29322338/pexels-photo-29322338/free-photo-of-colorful-painted-faces-and-floral-hats-portrait.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load'
+              'https://images.pexels.com/photos/4595704/pexels-photo-4595704.jpeg?auto=compress&cs=tinysrgb&w=1200'
             }
           />
         </div>
@@ -39,7 +40,7 @@ const Home = () => {
         <div className='order-1 order-2 md:col-start-1 md:col-end-5 self-center	'>
           <TextCard />
         </div>
-        <div className='sm:order-2 order-1 md:col-start-5 md:col-end-13 w-full '>
+        <div className='sm:order-2 order-1 md:col-start-5 md:col-end-13 w-full img-card-cont'>
           <ImageCard
             src={
               'https://images.pexels.com/photos/29339872/pexels-photo-29339872/free-photo-of-creative-outdoor-pink-art-installation.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load'
@@ -50,10 +51,14 @@ const Home = () => {
 
       <section>
         <div className='main-card-container grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
-          <MainCard />
-          <MainCard />
-          <MainCard />
-          <MainCard />
+          <Card
+            src={
+              'https://images.pexels.com/photos/18100639/pexels-photo-18100639/free-photo-of-rural-field-in-countryside.jpeg?auto=compress&cs=tinysrgb&w=1200'
+            }
+          />
+          <Card src='https://images.pexels.com/photos/5191975/pexels-photo-5191975.jpeg?auto=compress&cs=tinysrgb&w=1200' />
+          <Card src='https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1200' />
+          <Card srx='https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&w=1200' />
         </div>
       </section>
       <section>

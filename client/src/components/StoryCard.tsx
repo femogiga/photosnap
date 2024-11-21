@@ -3,13 +3,15 @@ import ImageCard from './imageCard';
 import { Link } from 'react-router-dom';
 import whiteArrow from '../assets/arrow-white.svg';
 
-const StoryCard = () => {
+const StoryCard = ({src}) => {
   return (
-    <article className=''>
+    <article className='story-card'>
       <div className='relative grid  '>
         <div className='overlay absolute   inset-0 opacity-30 z-4 bg-black'></div>
-        <ImageCard />
-        <div className='flex flex-col gap-6 md:absolute bg-black text-white p-4 md:absolute md:bg-transparent md:text-white md:top-1/4 py-6 z-2 md:w-3/5'>
+        <div>
+          <ImageCard src={src} />
+        </div>
+        <div className='flex flex-col gap-6 md:absolute bg-black text-white p-4 md:absolute md:bg-transparent md:text-white md:bottom-2 py-6 z-2 md:w-3/5'>
           <p>LAST MONTH'S FEATURED STORY</p>
           <h1 className='text-4xl'>HAZY FULL MOON OF APPALACHIA</h1>
           <p>March 2nd 2020 by John Appleseed</p>
