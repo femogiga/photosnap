@@ -32,13 +32,23 @@ const Home = () => {
           />
         </div>
         <div className='sm:grid-cols-1 md:col-start-9 md:col-end-13 self-center'>
-          <TextCard />
+          <TextCard
+            heading='Beautiful stories every time'
+            text={
+              'We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.'
+            }
+          />
         </div>
       </section>
 
       <section className='bg-white text-black grid md:grid-cols-12 sm:grid-cols-1 grid-rows-2 md:grid-rows-1'>
         <div className='order-1 order-2 md:col-start-1 md:col-end-5 self-center	'>
-          <TextCard />
+          <TextCard
+            heading={'Designed for everyone'}
+            text={
+              'Photosnap can help you create stories that resonate with your audience. Our tool is designed for photographers of all levels, brands, businesses you name it.'
+            }
+          />
         </div>
         <div className='sm:order-2 order-1 md:col-start-5 md:col-end-13 w-full img-card-cont'>
           <ImageCard

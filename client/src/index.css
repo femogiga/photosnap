@@ -143,7 +143,8 @@ img:hover {
 }
 
 section,
-article ,.img-card-cont{
+article,
+.img-card-cont {
   overflow: hidden;
 }
 
@@ -159,3 +160,43 @@ article ,.img-card-cont{
   background: linear-gradient(to right, pink, cyan);
 
 } */
+
+/* input[type='checkbox']:checked{
+  color: red;
+  width:2rem;
+  height:2rem;
+} */
+
+/* input[type='checkbox']:checked ~ {
+  color: red;
+  width: 2rem;
+  height: 2rem;
+} */
+
+.tunnel {
+  padding-block: .5px
+}
+
+.circle {
+  transition: transform 300ms ease-in-out
+}
+
+input:checked~.tunnel>.circle {
+  transform: translateX(3.4rem);
+  /* background:red; */
+}
+
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  /* max-width:42rem; */
+   top:0;
+  right:0;
+  left:0;
+  /* color: red; */
+  /* border:5px solid green; */
+  background: linear-gradient(to right, yellow, purple, blue);
+  z-index: 3
+}
