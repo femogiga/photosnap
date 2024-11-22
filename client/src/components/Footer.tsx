@@ -31,8 +31,10 @@ const Footer: React.FC = () => {
           <Link to='/'>PRICING</Link>
         </div>
         <div className='flex flex-col justify-between'>
-          <Link to='/' className='flex items-center gap-6 mb-4 '>
-            <span className='ps-14'>GET AN INVITE</span>
+          <Link
+            to='/'
+            className='flex items-center gap-6 mb-4 justify-center md:justify-start '>
+            <span className=''>GET AN INVITE</span>
             <span>
               <img src={whiteArrow} alt='' />
             </span>

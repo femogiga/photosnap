@@ -11,6 +11,8 @@ import {
 } from 'react-router-dom';
 import BaseLayout from './layouts/BaseLayout.tsx';
 import Story from './pages/Story.tsx';
+import Feature from './pages/Feature.tsx';
+import Pricing from './pages/Pricing.tsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +20,8 @@ const router = createBrowserRouter(
       <Route path='/' element={<App />} />
       <Route path='home' element={<App />} />
       <Route path='stories' element={<Story />} />
+      <Route path='features' element={<Feature />} />
+      <Route path='pricing' element={<Pricing />} />
     </Route>
   )
 );

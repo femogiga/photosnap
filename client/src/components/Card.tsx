@@ -2,12 +2,17 @@ import React from 'react';
 import ImageCard from './imageCard';
 import { Link } from 'react-router-dom';
 import whiteArrow from '../assets/arrow-white.svg';
+import Overlay from './Overlay';
 
-const Card = ({ src }) => {
+
+interface ICard {
+  src:string
+}
+const Card:React.FC<ICard> = ({ src }) => {
   return (
     <article className=''>
-      <div className='relative grid card'>
-        <div className='overlay absolute   inset-0 opacity-30 z-4 bg-black'></div>
+      <div className='relative grid card '>
+        <Overlay />
         <ImageCard src={src} />
         <div className='flex flex-col gap-2   text-white py-2 absolute bg-transparent md:text-white bottom-4 px-4 z-2 md:w-5/5 w-full'>
           <p className='text-sm'>March 2nd 2020 </p>

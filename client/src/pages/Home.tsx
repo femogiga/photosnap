@@ -43,7 +43,7 @@ const Home = () => {
         <div className='sm:order-2 order-1 md:col-start-5 md:col-end-13 w-full img-card-cont'>
           <ImageCard
             src={
-              'https://images.pexels.com/photos/29339872/pexels-photo-29339872/free-photo-of-creative-outdoor-pink-art-installation.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load'
+              'https://images.pexels.com/photos/29339872/pexels-photo-29339872/free-photo-of-creative-outdoor-pink-art-installation.jpeg?auto=compress&cs=tinysrgb&w=1800&lazy=load'
             }
           />
         </div>
@@ -53,7 +53,7 @@ const Home = () => {
         <div className='main-card-container grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
           <Card
             src={
-              'https://images.pexels.com/photos/18100639/pexels-photo-18100639/free-photo-of-rural-field-in-countryside.jpeg?auto=compress&cs=tinysrgb&w=1200'
+              'https://images.pexels.com/photos/18100639/pexels-photo-18100639/free-photo-of-rural-field-in-countryside.jpeg?auto=compress&cs=tinysrgb&w=1800'
             }
           />
           <Card src='https://images.pexels.com/photos/5191975/pexels-photo-5191975.jpeg?auto=compress&cs=tinysrgb&w=1200' />

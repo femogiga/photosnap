@@ -7,7 +7,7 @@ const StoryCard = ({src}) => {
   return (
     <article className='story-card'>
       <div className='relative grid  '>
-        <div className='overlay absolute   inset-0 opacity-30 z-4 bg-black'></div>
+        <div className='overlay absolute   inset-0 opacity-40 z-4 bg-black'></div>
         <div>
           <ImageCard src={src} />
         </div>
