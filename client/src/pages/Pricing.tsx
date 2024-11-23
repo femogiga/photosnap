@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Container from '../components/Container';
 import TextCard from '../components/TextCard';
 import TextCardIndicator from '../components/TextCardIndicator';
@@ -15,8 +15,11 @@ import whiteArrow from '../assets/arrow-white.svg';
 import { Link } from 'react-router-dom';
 import Overlay from '../components/Overlay';
 import PricingCard from '../components/PricingCard';
+import PeriodSelector from '../components/PeriodSelector';
 
 const Pricing = () => {
+  const [period, setPeriod] = useState(false);
+  useEffect(() => {}, [period]);
   return (
     <Container>
       <section className='relative bg-black text-white grid  md:grid-cols-12 sm:grid-cols-1 grid-rows-2 md:grid-rows-1'>
@@ -39,31 +42,45 @@ const Pricing = () => {
       </section>
 
       <section>
-        <form className='flex justify-center gap-16 py-12 items-center font-bold'>
-          <label htmlFor='monthly1'>Monthly</label>
-          <span className='relative '>
-            <input
-              type='checkbox'
-              name='pricing'
-              id='pricing'
-              className='hidden'
-            />
-
-            <label
-              htmlFor='pricing'
-              className='block tunnel border border-solid border-black	rounded-3xl w-24  top-30 left-0 bg-black'>
-              <div className='circle bg-white w-10 aspect-square rounded-full'></div>
-            </label>
-          </span>
-          <label htmlFor='yearly1'>Yearly</label>
-        </form>
+        <PeriodSelector
+          onChange={(e) => {
+            console.log(e.target.checked);
+            setPeriod(e.target.checked);
+          }}
+          period={period}
+        />
       </section>
 
       <section>
-        <div className='grid grid-cols-1 justify-items-center items-center md:grid-cols-3 '>
-          <PricingCard />
-          <PricingCard />
-          <PricingCard />
+        <div className='grid grid-cols-1 justify-items-center items-center md:grid-cols-3  gap-x-16 py-6'>
+
+            <PricingCard
+              text={
+                'Includes basic usage of our platform. Recommended for new and aspiring photographers.'
+              }
+              price={19}
+              title={'Basic'}
+              period={period}
+            />
+
+          <PricingCard
+            text={
+              'More advanced features available. Recommended for photography veterans and professionals.'
+            }
+            price={39}
+            title={'Pro'}
+            period={period}
+            topBordered
+          />
+
+          <PricingCard
+            text={
+              'Additional features available such as more detailed metrics. Recommended for business owners.'
+            }
+            price={99}
+            title={'Business'}
+            period={period}
+          />
         </div>
       </section>
 

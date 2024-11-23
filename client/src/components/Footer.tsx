@@ -25,10 +25,10 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className='flex flex-col justify-between md:justify-self-start'>
-          <Link to='/'>HOME</Link>
-          <Link to='/'>STORIES</Link>
-          <Link to='/'>FEATURES</Link>
-          <Link to='/'>PRICING</Link>
+          <NavLink style={({isActive})=> isActive ? {color:'red'}:{} }  to='/'>HOME</NavLink>
+          <NavLink style={({isActive})=> isActive ? {color:'red'}:{} } to='stories'>STORIES</NavLink>
+          <NavLink style={({isActive})=> isActive ? {color:'red'}:{} } to='features'>FEATURES</NavLink>
+          <NavLink style={({isActive})=> isActive ? {color:'red'}:{} } to='pricing'>PRICING</NavLink>
         </div>
         <div className='flex flex-col justify-between'>
           <Link

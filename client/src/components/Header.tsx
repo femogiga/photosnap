@@ -34,9 +34,21 @@ const Header = () => {
             !active ? 'hidden' : 'md:flex'
           } md:flex md:col-span-2 	md:justify-between   gap-x-4`}>
           <div className=' flex flex-col md:flex-row justify-end md:justify-between gap-y-8 md:gap-x-4 items-center min-h-full mb-4	md:mb-0 md:w-3/6 '>
-            <NavLink to='stories'>STORIES</NavLink>
-            <NavLink to='features'>FEATURES</NavLink>
-            <NavLink to='pricing'>PRICING</NavLink>
+            <NavLink
+              style={({ isActive }) => (isActive ? { color: 'red' } : {})}
+              to='stories'>
+              STORIES
+            </NavLink>
+            <NavLink
+              style={({ isActive }) => (isActive ? { color: 'red' } : {})}
+              to='features'>
+              FEATURES
+            </NavLink>
+            <NavLink
+              style={({ isActive }) => (isActive ? { color: 'red' } : {})}
+              to='pricing'>
+              PRICING
+            </NavLink>
           </div>
 
           <NavLink
