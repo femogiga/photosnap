@@ -208,3 +208,14 @@ input:checked~.tunnel{
   background: linear-gradient(to right, yellow, purple, blue);
   z-index: 3
 }
+
+
+
+/* tbody>* {
+  border:1px solid black;
+} */
+
+th ,td {
+  border-bottom: 1px solid rgb(212 212 212);
+  padding-block: 1rem;
+}

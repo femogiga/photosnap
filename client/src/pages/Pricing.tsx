@@ -11,6 +11,7 @@ import boost from '../assets/boost-exposure.svg';
 import domain from '../assets/custom-domain.svg';
 import dragDrop from '../assets/drag-drop.svg';
 import whiteArrow from '../assets/arrow-white.svg';
+import check from '../assets/check.svg';
 
 import { Link } from 'react-router-dom';
 import Overlay from '../components/Overlay';
@@ -51,17 +52,16 @@ const Pricing = () => {
         />
       </section>
 
-      <section>
+      <section className='mb-20'>
         <div className='grid grid-cols-1 justify-items-center items-center md:grid-cols-3  gap-x-16 py-6'>
-
-            <PricingCard
-              text={
-                'Includes basic usage of our platform. Recommended for new and aspiring photographers.'
-              }
-              price={19}
-              title={'Basic'}
-              period={period}
-            />
+          <PricingCard
+            text={
+              'Includes basic usage of our platform. Recommended for new and aspiring photographers.'
+            }
+            price={19}
+            title={'Basic'}
+            period={period}
+          />
 
           <PricingCard
             text={
@@ -81,6 +81,128 @@ const Pricing = () => {
             title={'Business'}
             period={period}
           />
+        </div>
+      </section>
+
+      <section className='mb-20'>
+        <div className='flex flex-col justify-center items-center'>
+          <h2 className='text-center text-4xl font-bold'>COMPARE</h2>
+          <table className='text-black w-6/6 md:w-3/6 max-w-2xl font-bold text-xs'>
+            <tbody>
+              <tr className=''>
+                <th scope='col' className='text-start'>
+                  THE FEATURES
+                </th>
+                <th scope='col' className=''>
+                  BASIC
+                </th>
+                <th scope='col' className=''>
+                  PRO
+                </th>
+                <th scope='col' className=''>
+                  BUSINESS
+                </th>
+              </tr>
+              <tr className=''>
+                <td>UNLIMITED STORY POSTING</td>
+                <td className=''>
+                  <img src={check} className='mx-auto my-auto  ' />
+                </td>
+                <td>
+                  <img src={check} className='mx-auto my-auto ' />
+                </td>
+                <td>
+                  <img src={check} className=' mx-auto my-auto ' />
+                </td>
+              </tr>
+
+              <tr className=''>
+                <td>UNLIMITED PHOTO UPLOAD</td>
+                <td className=''>
+                  <img src={check} className='mx-auto my-auto  ' />
+                </td>
+                <td>
+                  <img src={check} className='mx-auto my-auto ' />
+                </td>
+                <td>
+                  <img src={check} className=' mx-auto my-auto ' />
+                </td>
+              </tr>
+
+              <tr className=''>
+                <td>EMBEDDING CUSTOM CONTENT</td>
+                <td className=''>
+                  {/* <img src={check} className='mx-auto my-auto  ' /> */}
+                </td>
+                <td>
+                  <img src={check} className='mx-auto my-auto ' />
+                </td>
+                <td>
+                  <img src={check} className=' mx-auto my-auto ' />
+                </td>
+              </tr>
+              <tr className=''>
+                <td>CUSTOMIZE METADATA</td>
+                <td className=''>
+                  {/* <img src={check} className='mx-auto my-auto  ' /> */}
+                </td>
+                <td>
+                  <img src={check} className='mx-auto my-auto ' />
+                </td>
+                <td>
+                  <img src={check} className=' mx-auto my-auto ' />
+                </td>
+              </tr>
+              <tr className=''>
+                <td>ADVANCED METRICS</td>
+                <td className=''>
+                  {/* <img src={check} className='mx-auto my-auto  ' /> */}
+                </td>
+                <td>
+                  {/* <img src={check} className='mx-auto my-auto ' /> */}
+                </td>
+                <td>
+                  <img src={check} className=' mx-auto my-auto ' />
+                </td>
+              </tr>
+              <tr className=''>
+                <td>PHOTO DOWNLOADS</td>
+                <td className=''>
+                  {/* <img src={check} className='mx-auto my-auto  ' /> */}
+                </td>
+                <td>
+                  {/* <img src={check} className='mx-auto my-auto ' /> */}
+                </td>
+                <td>
+                  <img src={check} className=' mx-auto my-auto ' />
+                </td>
+              </tr>
+              <tr className=''>
+                <td>SEARCH ENGINE INDEXING</td>
+                <td className=''>
+                  {/* <img src={check} className='mx-auto my-auto  ' /> */}
+                </td>
+                <td>
+                  {/* <img src={check} className='mx-auto my-auto ' /> */}
+                </td>
+                <td>
+                  <img src={check} className=' mx-auto my-auto ' />
+                </td>
+              </tr>
+              <tr className=''>
+                <td>CUSTOM ANALYTICS</td>
+                <td className=''>
+                  {/* <img src={check} className='mx-auto my-auto  ' /> */}
+                </td>
+                <td>
+                  {/* <img src={check} className='mx-auto my-auto ' /> */}
+                </td>
+                <td>
+                  <img src={check} className=' mx-auto my-auto ' />
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 

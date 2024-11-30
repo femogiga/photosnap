@@ -21,7 +21,7 @@ const PricingCard: React.FC<IPricingCard> = ({
           !topBordered ? 'md:py-4' : ''
         } relative py-10  ${
           !topBordered ? 'bg-gray-100 text-slate-700' : 'bg-black text-white'
-        } relative flex flex-col items-center  gap-y-8 px-10   `}>
+        } relative flex flex-col items-center  gap-y-8 px-10 `}>
         <p className='text-2xl'>{title || 'Pro'}</p>
         <p className='text-center'>
           {text ||

@@ -21,31 +21,34 @@ const Header = () => {
   return (
     <header className='header z-10 bg-white linkgroup '>
       <nav className='  grid grid-cols-1 md:grid-cols-3 gap-y-4 	 items-center font-bold py-8 px-8  '>
-        <section className='flex items-center justify-between'>
+        <div className='flex items-center justify-between'>
           <NavLink to='/'>
             <img src={logo} />
           </NavLink>
           <div className='sm:block md:hidden col-span-2	justify-self-end '>
             <Hamburger onClick={handleClick} active={active} />
           </div>
-        </section>
-        <section
+        </div>
+        <div
           className={`${
             !active ? 'hidden' : 'md:flex'
           } md:flex md:col-span-2 	md:justify-between   gap-x-4`}>
           <div className=' flex flex-col md:flex-row justify-end md:justify-between gap-y-8 md:gap-x-4 items-center min-h-full mb-4	md:mb-0 md:w-3/6 '>
             <NavLink
               style={({ isActive }) => (isActive ? { color: 'red' } : {})}
+              onClick={() => setActive(false)}
               to='stories'>
               STORIES
             </NavLink>
             <NavLink
               style={({ isActive }) => (isActive ? { color: 'red' } : {})}
+              onClick={() => setActive(false)}
               to='features'>
               FEATURES
             </NavLink>
             <NavLink
               style={({ isActive }) => (isActive ? { color: 'red' } : {})}
+              onClick={() => setActive(false)}
               to='pricing'>
               PRICING
             </NavLink>
@@ -58,7 +61,7 @@ const Header = () => {
             }>
             GET AN INVITE
           </NavLink>
-        </section>
+        </div>
       </nav>
     </header>
   );
